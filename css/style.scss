@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// variables
+
+$Pink: hsl(322, 100%, 66%);
+$Light-Pink: hsl(321, 100%, 78%);
+$Light-Red: hsl(0, 100%, 63%);
+
+$Very-Dark-Cyan: hsl(192, 100%, 9%);
+$Very-Pale-Blue: hsl(207, 100%, 98%);
+
+$btn-transition: 250ms ease-in;
+
+// padding
+.padding{
+  padding: 3rem 5rem;
+} 
+
+.margin{
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+// typographie
+h1,
+h2 {
+  color: $Very-Dark-Cyan;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+}
+p{
+  font-size: .9rem;
+}
+// styling the Get-started button
+.get-started{
+  background-color: $Pink;
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 25px;
+  transition: background-color $btn-transition;
+
+  &:hover {
+    background-color: $Light-Pink;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  background-color: white;
+}
+
+// styling the header
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    img{
+        max-width: 120px;
+    }
+
+    a{
+        padding:.3rem;
+        width: 120px;
+        color: $Pink;
+        border: 1.5px solid $Pink;
+        border-radius: 25px;
+        transition: color $btn-transition, border $btn-transition;
+
+        &:hover{
+        border: 1.5px solid $Light-Pink;
+        color: $Light-Pink;
+        }
+    }
+}
+
+// styling the intro section 
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  // styling the text inside the intro section 
+  .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+    p{
+      max-width: 50ch;
+      color: $Very-Dark-Cyan;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  // seting max-width to the mockup to make it responsive
+  .intro-mockup{
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  // styling the statistic div 
+  .stat{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    
+    img{
+      max-width: 30px;
+    }
+    h1{
+      font-size: 4rem;
+      margin-bottom: 0;
+    }
+    p{
+      color: lightslategray;
+      text-align: center;
+    }
+  }
+}
+
+// styling the cards
+.card{
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  .text{
+    max-width: 50%;
+    p{
+      max-width: 55ch;
+      color: rgb(84, 100, 116);
+    }
+  }
+  img{
+    max-width: 50%;
+  }
+}
+
+// changing the row direction on the second card 
+.second{
+  flex-direction: row-reverse;
+}
+
+// giving each card its background
+picture{
+  max-width: 100%;
+  img{
+    object-fit:scale-down;
+  }
+}
+.first{
+  position: relative;
+  background:$Very-Pale-Blue;
+ 
+  &::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -20% ;
+    left: 0;
+    background: url(../images/bg-section-top-desktop-1.svg) no-repeat ;
+    background-size: contain;
+  }
+  &::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -17% ;
+    left: 0;
+    background: url(../images/bg-section-bottom-desktop-1.svg) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+}
+
+.third{
+  position: relative;
+  background:$Very-Pale-Blue;
+  &::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -22% ;
+    left: 0;
+    background: url(../images/bg-section-top-desktop-2.svg) no-repeat ;
+    background-size: contain;
+    z-index: -1;
+  }
+  &::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -20% ;
+    left: 0;
+    background: url(../images/bg-section-bottom-desktop-2.svg) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+  }
+}
+
+.call-to-action{
+  text-align: center;
+}
+
+.footer-bg{
+  background-color: violet;
+  background: url(../images/bg-footer-top-desktop.svg) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  height:150px;
+  width: 100%;
+}
+
+// styling the footer 
+footer{
+  padding-top: 0;
+  margin-top: 0;
+  background: $Very-Dark-Cyan;
+  position: relative;
+  color: whitesmoke;
+
+  .flex{
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    .left{
+      flex: 1;
+      img{
+        max-width: 120px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        padding-bottom: 1rem;
+      }
+      >p{
+        padding-bottom: 1.5rem;
+        max-width: 35ch;
+      }
+      .phone-email{
+        display: flex;
+        gap: .5rem;
+        margin-bottom: 1rem;
+      }
+      .social-media{
+        display: flex;
+        gap: 1rem;
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        .fab{
+          cursor: pointer;
+          transition: color $btn-transition;
+          &:hover{
+            color: rgb(5, 214, 214);
+          }
+        }
+      }
+    }
+    .newsletter{
+      flex: 1;
+      h3{
+        margin-bottom: 1rem;
+      }
+      p{
+        margin-bottom: 1.5rem;
+        max-width: 40ch;
+      }
+      form{
+        display: flex;
+        gap: 1rem;
+        input[type=email]{
+          border: none;
+          padding: .5rem 1rem;
+          border-radius: 5px;
+          height: auto;
+        }
+        input[type=submit]{
+          border: none;
+          background : $Pink;
+          color: white;
+          cursor: pointer;
+          font-family: "Open Sans", sans-serif;
+          padding: .5rem 1rem;
+          border-radius: 5px;
+          height: auto;
+          transition: background $Light-Pink;
+          &:hover{
+            background: $Light-Pink;
+          }
+        }
+      }
+    }
+  }
+  .attribution{
+    text-align: center;
+    color: lightgrey;
+    a{
+      color: rgb(3, 160, 160);
+    }
+  }
+}
+
+// making it responsive
+@media screen and (max-width: 700px){
+  .flex{
+    flex-direction: column-reverse;
+    form{
+      max-width: 340px;
+    }
+  }  
+}
+
+@media screen and (max-width: 600px){
+
+  .padding{
+    padding: 2rem 2rem;
+  } 
+  
+
+  .stat{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .card{
+    flex-direction: column-reverse;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    .text{
+      max-width: 100%;
+      text-align: center;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+
+  .first{
+    &::before{
+      top: -26% ;
+      background: url(../images/bg-section-top-mobile-1.svg) no-repeat ;
+      background-position: top;
+      background-size: contain;
+    }
+    &::after{
+      bottom: -100% ;
+      background: url(../images/bg-section-bottom-mobile-1.svg) no-repeat;
+      background-size: contain;
+    }
+  }
+
+  
+  .third{
+    position: relative;
+    background:$Very-Pale-Blue;
+    &::before{
+      top: -25% ;
+      background: url(../images/bg-section-top-mobile-2.svg) no-repeat ;
+      background-size: contain;
+    }
+    &::after{
+      bottom: -98%;
+      background: url(../images/bg-section-bottom-mobile-2.svg) no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .newsletter{
+    form{
+      flex-direction: column;
+      align-items: flex-end;
+      input[type=email]{
+       width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 548px){
+  
+  .first{
+    &::before{
+      top: -24% ;
+      background: url(../images/bg-section-top-mobile-1.svg) no-repeat ;
+      background-position: top;
+      background-size: contain;
+    }
+  }
+  .third{
+    &::before{
+      top: -24% ;
+      background: url(../images/bg-section-top-mobile-2.svg) no-repeat ;
+      background-size: contain;
+    }
+  }  
+}
+
+
+@media screen and (max-width: 474px){
+
+
+
+  .first{
+    &::before{
+      top: -20% ;
+      background: url(../images/bg-section-top-mobile-1.svg) no-repeat ;
+      background-position: top;
+      background-size: contain;
+    }
+  }
+  .third{
+    &::before{
+      top: -21% ;
+      background: url(../images/bg-section-top-mobile-2.svg) no-repeat ;
+      background-size: contain;
+    }
+  }
+  
+}
