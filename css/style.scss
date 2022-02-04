@@ -162,7 +162,6 @@ picture{
 .first{
   position: relative;
   background:$Very-Pale-Blue;
- 
   &::before{
     content: "";
     width: 100%;
@@ -196,7 +195,7 @@ picture{
     position: absolute;
     top: -22% ;
     left: 0;
-    background: url(../images/bg-section-top-desktop-2.svg) no-repeat ;
+    // background: url(../images/bg-section-top-desktop-2.svg) no-repeat ;
     background-size: contain;
     z-index: -1;
   }
@@ -207,7 +206,7 @@ picture{
     position: absolute;
     bottom: -20% ;
     left: 0;
-    background: url(../images/bg-section-bottom-desktop-2.svg) no-repeat;
+    // background: url(../images/bg-section-bottom-desktop-2.svg) no-repeat;
     background-size: contain;
     background-position: bottom;
     z-index: -1;
@@ -387,7 +386,7 @@ footer{
       flex-direction: column;
       align-items: flex-end;
       input[type=email]{
-       width: 100%;
+      width: 100%;
       }
     }
   }

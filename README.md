@@ -22,9 +22,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop]()
+![Desktop](./screen-shots/desktop.png)
 
-![Mobile]()
+![Mobile](./screen-shots/mobile.png)
 
 
 ### Links
