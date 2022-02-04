@@ -5,8 +5,8 @@
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
+  - [Screenshot](#screenshot)
   - [Built with](#built-with)
 - [Author](#author)
 
@@ -20,15 +20,15 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
-
-![Desktop](./screen-shots/desktop.png)
-
-![Mobile](./screen-shots/mobile.png)
-
-
 ### Links
 - Live Site URL: [click-me]( https://mohamedbehhar.github.io/Landing-page-with-curved-section/)
+
+### Screenshot
+- Desktop
+![Desktop](./screen-shots/desktop.png)
+
+- Mobile
+![Mobile](./screen-shots/mobile.png)
 
 
 ### Built with
